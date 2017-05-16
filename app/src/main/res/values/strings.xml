@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ProjectsDemo</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="menu_search">查找</string>
+    <string name="setting">设置</string>
+    <string name="menu_search2">查找</string>
+    <string name="menu_persion">个人</string>
+    <string name="menu_init">初始化</string>
+    <string name="menu_download">下载</string>
+</resources>

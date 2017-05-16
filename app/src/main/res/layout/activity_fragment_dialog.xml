@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/id_fragment_dialog_one"
+        android:text="fragment对话框dialogFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/id_fragment_dialog_two"
+        android:text="fragment对话框alerterDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/id_fragment_dialog_activity"
+        android:text="碎片、窗口、对话框数据传递"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

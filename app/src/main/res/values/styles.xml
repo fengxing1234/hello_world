@@ -1,0 +1,33 @@
+<resources>
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#8A2BE2</item>
+        <item name="colorPrimaryDark">#FFEBCD</item>
+        <item name="android:navigationBarColor">#FF8C00</item>
+        <item name="colorAccent">#FD87A9</item>
+        <item name="android:listDivider">@drawable/my_list_divider</item>
+    </style>
+
+    <!--配置主题 遵循Material Design-->
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/DeepPurple</item>
+        <item name="colorPrimaryDark">@color/DeepPurple900</item>
+        <item name="colorAccent">@color/Orange</item>
+        <item name="android:listDivider">@drawable/my_list_divider</item>
+    </style>
+    <style name="MyAppTheme" parent="AppTheme.Base">
+
+    </style>
+
+    <style name="retrofitDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/iosstyle_halftransparent_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

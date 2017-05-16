@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+//
+apply plugin: 'com.neenbedankt.android-apt'
+
+def dbflow_version = "3.0.0-beta3"
+//def okhttp_verion ="";
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId "cn.projects.com.projectsdemo"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test:runner:0.5') {
+        exclude module: 'support-annotations'
+    }
+    //androidTestCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.4.1'
+    apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    // use kapt for kotlin apt
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    //Rxjava
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    compile 'com.trello:rxlifecycle:1.0'
+    compile 'com.trello:rxlifecycle-components:1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //dialog自定义  有机会学习下
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
+    //Hawk 是一个非常便捷的数据库  . 操作数据库只需一行代码 , 能存任何数据类型 .
+    //github 地址: https://github.com/orhanobut/hawk
+    compile 'com.orhanobut:hawk:2.0.0-Alpha'
+    compile 'com.jakewharton.timber:timber:4.3.0'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'com.github.tony19:logback-android-core:1.1.1-6'
+    compile('com.github.tony19:logback-android-classic:1.1.1-6') {
+        // workaround issue #73
+        exclude group: 'com.google.android', module: 'android'
+    }
+}

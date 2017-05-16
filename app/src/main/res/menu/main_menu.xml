@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--app:actionViewClass="android.support.v7.widget.SearchView" 引用资源库-->
+    <item
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:id="@+id/btn_search"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_search"
+        android:orderInCategory="80"
+        >
+    </item>
+    <item
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        android:id="@+id/btn_share"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_search"
+        android:orderInCategory="90">
+    </item>
+
+    <item
+        android:title="@string/setting"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/btn_setting1">
+    </item>
+
+    <item
+        android:title="@string/setting"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/btn_setting2">
+    </item>
+    <item
+        android:title="@string/setting"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/btn_setting3">
+    </item>
+</menu>

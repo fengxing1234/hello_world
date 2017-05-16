@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/id_rg_location_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/id_rb_location_heightMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="高精度模式" />
+
+        <RadioButton
+            android:id="@+id/id_rb_location_devices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设备模式" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/id_btn_location_is_started"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="正在定位?" />
+
+        <Button
+            android:id="@+id/id_btn_location_start_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始定位" />
+
+        <Button
+            android:id="@+id/id_btn_location_stop_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="关闭定位" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_et_location_is_start_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="是否定位的结果" />
+
+    <TextView
+        android:id="@+id/id_et_location_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="定位结果" />
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group >
+        <item
+            android:id="@+id/menu_search"
+            android:checkable="true"
+            android:title="@string/menu_search2" />
+        <item
+            android:id="@+id/menu_persion"
+            android:checkable="true"
+            android:title="@string/menu_persion" />
+        <item
+            android:id="@+id/menu_init"
+            android:checkable="true"
+            android:title="@string/menu_init" />
+        <item
+            android:id="@+id/menu_download"
+            android:checkable="true"
+            android:title="@string/menu_download" />
+    </group>
+</menu>

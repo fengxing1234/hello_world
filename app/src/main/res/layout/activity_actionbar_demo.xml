@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <!--
+    关于字体的样式，可以在布局文件设置属性
+    app:titleTextAppearance、app:subtitleTextAppearance
+    或者代码setTitleTextAppearance、setSubTitleTextAppearance设置。
+    -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/demo_toolbar"
+        app:title="App Title"
+        app:subtitle="Sub Title"
+        app:navigationIcon="@mipmap/ic_launcher"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:useDefaultMargins="true"
+        android:columnCount="3">
+
+
+        <TextView
+            android:text="First Name:"
+            android:layout_gravity="right"
+            />
+
+        <EditText
+            android:ems="10"
+            android:layout_columnSpan="2"
+            />
+
+        <TextView
+            android:text="Last Name:"
+
+            android:layout_column="0"
+            android:layout_gravity="right" />
+
+        <EditText
+            android:ems="10"
+            android:layout_columnSpan="2" />
+
+
+        <TextView
+            android:text="Visit Type:"
+
+            android:layout_column="0"
+            android:layout_gravity="right" />
+
+        <RadioGroup android:layout_columnSpan="2">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Social" />
+
+        </RadioGroup>
+
+        <Button
+            android:text="Ok"
+            android:layout_column="1" />
+
+        <Button
+            android:text="Cancel"
+            android:layout_column="2" />
+
+    </GridLayout>
+</LinearLayout>

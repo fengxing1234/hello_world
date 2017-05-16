@@ -1,0 +1,6 @@
+<root>
+  <item
+      name='android.support.v4.app.FragmentManager android.support.v4.app.Fragment findFragmentByTag(java.lang.String)'>
+    <annotation name='android.support.annotation.NonNull' />
+  </item>
+</root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <ImageButton
+        android:id="@+id/fragment_liebiao"
+        android:layout_width="0dp"
+        android:background="@drawable/liebiao"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/fragment_shishang"
+        android:layout_width="0dp"
+        android:background="@drawable/shishang"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/fragment_car"
+        android:layout_width="0dp"
+        android:background="@drawable/car"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/fragment_dama"
+        android:layout_width="0dp"
+        android:background="@drawable/dama"
+        android:layout_weight="1"
+        android:layout_height="match_parent" />
+</LinearLayout>

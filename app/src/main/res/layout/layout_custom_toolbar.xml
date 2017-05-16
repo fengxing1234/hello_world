@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_toolbar"
+    app:title="App Title"
+    app:subtitle="Sub Title"
+    app:navigationIcon="@mipmap/ic_launcher"
+    android:minHeight="?attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary">
+</android.support.v7.widget.Toolbar>
+    <!--
+       关于字体的样式，可以在布局文件设置属性
+       app:titleTextAppearance、app:subtitleTextAppearance
+       或者代码setTitleTextAppearance、setSubTitleTextAppearance设置。
+       -->
