@@ -65,8 +65,8 @@ public class RetrofitDemoActivity extends BaseActivity{
 //                }.start();
                 //getSimpleNetData();
                 //getFileType();
-                //getTopMovie();
-                getDataHttpManager();
+                getTopMovie();
+                //getDataHttpManager();
             }
         });
     }

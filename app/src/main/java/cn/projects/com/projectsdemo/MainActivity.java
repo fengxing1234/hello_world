@@ -22,6 +22,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
+import cn.projects.com.projectsdemo.kotlin.KotlinDemoActivity;
 import cn.projects.com.projectsdemo.location.GaoDeLocationActivity;
 import cn.projects.com.projectsdemo.permission.RequestPermissionActivity;
 import cn.projects.com.projectsdemo.retrofit.RetrofitDemoActivity;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GridView mGridView;
 
-    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构"};
+    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构","Kotlin"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 7:
                     intent = new Intent(MainActivity.this, TreeViewActivity.class);
+                    break;
+                case 8:
+                    intent = new Intent(MainActivity.this, KotlinDemoActivity.class);
                     break;
             }
             startActivity(intent);

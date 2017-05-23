@@ -114,6 +114,9 @@
         <activity android:name=".thread.future.FutureDemoActivity">
 
         </activity>
+        <activity android:name=".kotlin.KotlinDemoActivity">
+
+        </activity>
 
         <!--定位相关-->
 
