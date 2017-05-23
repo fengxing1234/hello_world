@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//
-apply plugin: 'com.neenbedankt.android-apt'
 
 def dbflow_version = "3.0.0-beta3"
 //def okhttp_verion ="";
@@ -40,7 +38,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.7.0'
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.4.1'
-    apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
     // use kapt for kotlin apt
     compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
     compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
@@ -52,13 +50,11 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'io.reactivex:rxandroid:1.2.1'
-/*
 
     //Android Architecture Components
     compile "android.arch.lifecycle:runtime:1.0.0-alpha1"
     compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
     annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
-*/
 
 
     //dialog自定义  有机会学习下
