@@ -14,7 +14,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.projects.com.projectsdemo.R;
@@ -31,13 +31,13 @@ public class ThreadPoolExecutorActivity extends AppCompatActivity {
     private static final long KEEP_ALIVE_TIME = 60 * 1000;
     private static final String TAG = ThreadPoolExecutorActivity.class.getSimpleName();
 
-    @Bind(R.id.id_tv_thread_pause)
+    @BindView(R.id.id_tv_thread_pause)
     TextView textView;
 
-    @Bind(R.id.id_btn_thread_start)
+    @BindView(R.id.id_btn_thread_start)
     Button btn_start;
 
-    @Bind(R.id.id_btn_thread_pause)
+    @BindView(R.id.id_btn_thread_pause)
     Button btn_pause;
 
 //    @Bind(R.id.id_btn_thread_stop)

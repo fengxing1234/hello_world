@@ -114,7 +114,9 @@
         <activity android:name=".thread.future.FutureDemoActivity">
 
         </activity>
-        <activity android:name=".kotlin.KotlinDemoActivity">
+        <activity android:name=".kotlin.KotlinDemoActivity"
+            android:label="@string/app_name"
+            >
 
         </activity>
 

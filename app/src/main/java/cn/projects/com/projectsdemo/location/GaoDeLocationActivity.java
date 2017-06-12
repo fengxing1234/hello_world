@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.amap.api.location.AMapLocationClientOption;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.projects.com.projectsdemo.R;
@@ -24,22 +24,22 @@ public class GaoDeLocationActivity extends AppCompatActivity {
 
 
     private static final String TAG = GaoDeLocationActivity.class.getSimpleName();
-    @Bind(R.id.id_rg_location_mode)
+    @BindView(R.id.id_rg_location_mode)
     RadioGroup mRadioGroup;
 
-    @Bind(R.id.id_btn_location_is_started)
+    @BindView(R.id.id_btn_location_is_started)
     Button mIsStarted;
 
-    @Bind(R.id.id_btn_location_start_location)
+    @BindView(R.id.id_btn_location_start_location)
     Button mStartLocation;
 
-    @Bind(R.id.id_btn_location_stop_location)
+    @BindView(R.id.id_btn_location_stop_location)
     Button mStopLocation;
 
-    @Bind(R.id.id_et_location_is_start_result)
+    @BindView(R.id.id_et_location_is_start_result)
     TextView mIsStartResult;
 
-    @Bind(R.id.id_et_location_result)
+    @BindView(R.id.id_et_location_result)
     TextView mLocationResult;
 
 

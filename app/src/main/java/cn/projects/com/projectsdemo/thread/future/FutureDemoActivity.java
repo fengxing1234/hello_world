@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.projects.com.projectsdemo.R;
@@ -34,13 +34,13 @@ public class FutureDemoActivity extends AppCompatActivity {
 
     private static final String TAG = FutureDemoActivity.class.getSimpleName();
 
-    @Bind(R.id.id_btn_future_start)
+    @BindView(R.id.id_btn_future_start)
     Button btn_start;
 
-    @Bind(R.id.id_btn_future_cancel)
+    @BindView(R.id.id_btn_future_cancel)
     Button btn_cancel;
 
-    @Bind(R.id.id_tv_future_result)
+    @BindView(R.id.id_tv_future_result)
     TextView tv_result;
     private FutureTask<Number> futureTask;
 

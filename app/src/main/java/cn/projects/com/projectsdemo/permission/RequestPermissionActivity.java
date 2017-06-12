@@ -3,14 +3,12 @@ package cn.projects.com.projectsdemo.permission;
 import android.Manifest;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.projects.com.projectsdemo.R;
@@ -31,7 +29,7 @@ public class RequestPermissionActivity extends CheckPermissionActivity {
     };
     private static final String TAG = "RequestPermission";
 
-    @Bind(R.id.id_btn_request_permission)
+    @BindView(R.id.id_btn_request_permission)
     Button button;
 
     @Override

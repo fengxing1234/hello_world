@@ -1,6 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<?xml version="1.0" encoding="utf-8"?><!--xmlns 命名空间 作用：--><!--Tools 辅助工具 用于提示编辑器的 context 是关联哪一个activity 这样编辑器在展示布局效果的时候，就能针对 Activity 的一些属性进行有针对性的处理-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.KotlinDemoActivity">
 
-</LinearLayout>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_height="wrap_content">
+        <!--app:theme="@style/AppTheme.AppBarOverlay" 没啥作用-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_kotlin_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" 没啥用啊-->
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_kotlin_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:tabGravity="fill"
+            app:tabMode="scrollable">
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/kotlin_id_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="cn.projects.com.projectsdemo.kotlin.view.FloatingActionBehavior"
+        tools:context=".kotlin.KotlinDemoActivity"
+        tools:showIn="@layout/activity_kotlin">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/kotlin__flat_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp"
+        android:src="@mipmap/ic_github"
+        app:rippleColor="@color/material_amber_50" />
+</android.support.design.widget.CoordinatorLayout>

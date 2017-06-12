@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.concurrent.TimeUnit;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.projects.com.projectsdemo.R;
 import cn.projects.com.projectsdemo.retrofit.data.BaseResult;
@@ -38,10 +38,10 @@ public class RetrofitDemoActivity extends BaseActivity{
     private static final String TAG = RetrofitDemoActivity.class.getSimpleName();
 
 
-    @Bind(R.id.id_retrofit_demo_btn)
+    @BindView(R.id.id_retrofit_demo_btn)
     Button button;
 
-    @Bind(R.id.id_retrofit_demo_et)
+    @BindView(R.id.id_retrofit_demo_et)
     EditText editText;
     private SimpleLoadDialog dialogHandler;
 
