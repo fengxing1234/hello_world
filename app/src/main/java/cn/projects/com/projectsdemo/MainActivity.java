@@ -22,7 +22,6 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
-import cn.projects.com.projectsdemo.kotlin.KotlinDemoActivity;
 import cn.projects.com.projectsdemo.location.GaoDeLocationActivity;
 import cn.projects.com.projectsdemo.permission.RequestPermissionActivity;
 import cn.projects.com.projectsdemo.retrofit.RetrofitDemoActivity;
@@ -30,6 +29,7 @@ import cn.projects.com.projectsdemo.rxjava.DemoRxJavaActivity;
 import cn.projects.com.projectsdemo.thread.ThreadPoolExecutorActivity;
 import cn.projects.com.projectsdemo.thread.future.FutureDemoActivity;
 import cn.projects.com.projectsdemo.treeview.TreeViewActivity;
+import cn.projects.com.projectsdemo.zxing.ZxingDemoActivity;
 
 /**
  * 1. appCompatActivity 与 Activity的区别
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GridView mGridView;
 
-    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构","Kotlin"};
+    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构","zxing"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, TreeViewActivity.class);
                     break;
                 case 8:
-                    intent = new Intent(MainActivity.this, KotlinDemoActivity.class);
+                    intent = new Intent(MainActivity.this,ZxingDemoActivity.class);
                     break;
             }
             startActivity(intent);

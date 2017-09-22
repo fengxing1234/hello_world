@@ -281,7 +281,7 @@ public class DemoRxJavaActivity extends AppCompatActivity {
                             @Override
                             public Observable<?> call(Integer integer) {
                                 Log.d(TAG, "call count: " + integer);
-                                return observable.timer(3, TimeUnit.SECONDS);
+                                return null;
                             }
                         });
             }
