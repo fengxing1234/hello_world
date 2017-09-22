@@ -123,6 +123,15 @@
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
+
+        <!-- 设置二维码扫描界面方向为竖屏 -->
+        <activity
+            android:name=".zxing.CustomCaptureActivity"
+            android:label="自定义扫描界面"
+            android:screenOrientation="portrait"/>
+
+
+
         <!--定位相关-->
 
         <service android:name="com.amap.api.location.APSService"></service>
