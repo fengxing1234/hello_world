@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.projects.com.projectsdemo.R;
+import cn.projects.com.projectsdemo.utils.permission.CheckPermissionActivity;
 
 /**
  * Created by fengxing on 2017/5/8.

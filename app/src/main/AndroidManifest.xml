@@ -103,7 +103,7 @@
         <activity android:name=".permission.RequestPermissionActivity">
 
         </activity>
-        <activity android:name=".permission.CheckPermissionActivity">
+        <activity android:name=".utils.permission.CheckPermissionActivity">
 
         </activity>
         <activity android:name=".location.GaoDeLocationActivity">
@@ -119,6 +119,10 @@
 
         </activity>
 
+        <activity android:name=".testsim.SimNo1Activity">
+
+        </activity>
+
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="portrait"
@@ -128,8 +132,7 @@
         <activity
             android:name=".zxing.CustomCaptureActivity"
             android:label="自定义扫描界面"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="fullUser" />
 
 
         <!--定位相关-->

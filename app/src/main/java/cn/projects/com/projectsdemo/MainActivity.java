@@ -26,6 +26,7 @@ import cn.projects.com.projectsdemo.location.GaoDeLocationActivity;
 import cn.projects.com.projectsdemo.permission.RequestPermissionActivity;
 import cn.projects.com.projectsdemo.retrofit.RetrofitDemoActivity;
 import cn.projects.com.projectsdemo.rxjava.DemoRxJavaActivity;
+import cn.projects.com.projectsdemo.testsim.SimNo1Activity;
 import cn.projects.com.projectsdemo.thread.ThreadPoolExecutorActivity;
 import cn.projects.com.projectsdemo.thread.future.FutureDemoActivity;
 import cn.projects.com.projectsdemo.treeview.TreeViewActivity;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private GridView mGridView;
 
-    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构","zxing"};
+    private String[] datas = {"RxJava", "Retrofit", "TreeView", "权限封装", "高德定位", "线程池", "Future","树结构","zxing","sim"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 8:
                     intent = new Intent(MainActivity.this,ZxingDemoActivity.class);
+                    break;
+                case 9:
+                    intent = new Intent(MainActivity.this,SimNo1Activity.class);
                     break;
             }
             startActivity(intent);

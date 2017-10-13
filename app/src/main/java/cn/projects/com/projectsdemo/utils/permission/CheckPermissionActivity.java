@@ -1,10 +1,11 @@
-package cn.projects.com.projectsdemo.permission;
+package cn.projects.com.projectsdemo.utils.permission;
 
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -12,6 +13,12 @@ import java.util.List;
 
 /**
  * Created by fengxing on 2017/5/8.
+ * 校验权限使用
+ * 继承本类
+ * 调用方法 needRequestPermissions（传入需要校验的权限）
+ * 实现checkPermissionResult
+ * ture 给了权限
+ * false 没给权限
  */
 
 public abstract class CheckPermissionActivity extends AppCompatActivity {
@@ -23,6 +30,11 @@ public abstract class CheckPermissionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
+    /**
+     * 需要校验的权限
+     * @param permissions
+     * @return
+     */
     public boolean needRequestPermissions(String[] permissions) {
 
         boolean isNeedCheckout = true;
@@ -51,6 +63,11 @@ public abstract class CheckPermissionActivity extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * 校验权限
+     * @param permissions
+     */
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void checkPermission(String... permissions) {
         List<String> deniedPermissions = getDeniedPermissions(permissions);
 
@@ -61,6 +78,7 @@ public abstract class CheckPermissionActivity extends AppCompatActivity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private List<String> getDeniedPermissions(String[] permissions) {
         List<String> deniedPermission = new ArrayList<>();
         for (String permission : permissions) {
@@ -68,9 +86,7 @@ public abstract class CheckPermissionActivity extends AppCompatActivity {
             if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED
                 //      || shouldShowRequestPermissionRationale) {
                     ) {
-
                 deniedPermission.add(permission);
-
             }
         }
         return deniedPermission;
@@ -90,6 +106,11 @@ public abstract class CheckPermissionActivity extends AppCompatActivity {
 
     protected abstract void checkPermissionResult(boolean result);
 
+    /**
+     * 校验权限 用户给没给权限
+     * @param grantResults
+     * @return
+     */
     private boolean verifyPermissions(int[] grantResults) {
         if (grantResults.length == 0) {
             return true;

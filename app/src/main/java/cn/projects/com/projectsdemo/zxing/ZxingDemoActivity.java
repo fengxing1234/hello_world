@@ -2,6 +2,7 @@ package cn.projects.com.projectsdemo.zxing;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
@@ -67,17 +68,27 @@ public class ZxingDemoActivity extends AppCompatActivity {
             if (contents == null) {
                 Toast.makeText(this, "取消扫描", Toast.LENGTH_LONG).show();
             } else {
+                Log.d(TAG, "rawbyByres: "+result.getRawBytes());
+                Log.d(TAG, "level: "+result.getErrorCorrectionLevel());
+                Log.d(TAG, "formatName: "+result.getFormatName());
+                Log.d(TAG, "orientation: "+result.getOrientation());
                 Toast.makeText(this, "扫描内容:" + result.getContents(), Toast.LENGTH_LONG).show();
                 String barcodeImagePath = result.getBarcodeImagePath();
                 Log.d(TAG, "显示条形码（二维码）图片的保存路径 " + barcodeImagePath);
                 if (contents.startsWith("http") || contents.startsWith("https")) {
                     turn2WebClient(ZxingDemoActivity.this, contents);
                 }
-                showImage(result.getBarcodeImagePath());
+                showImage(result.getRawBytes());
+                //showImage(result.getBarcodeImagePath());
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
+    }
+
+    private void showImage(byte[] rawBytes) {
+        Bitmap bitmap = BitmapFactory.decodeByteArray(rawBytes, 0, rawBytes.length);
+        iv_show.setImageBitmap(bitmap);
     }
 
     /**
